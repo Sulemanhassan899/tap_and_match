@@ -1,6 +1,6 @@
-# 🍉 Tap to Fill & Match - GetX Edition
+# 🍉 Tap to Fill & Match 
 
-A colorful, engaging Flutter game where players tap and hold an emoji to fill a glass and match a target percentage. Built with **GetX** for modern state management.
+A colorful, engaging Flutter game where players tap and hold an emoji to fill a glass and match a target percentage. Built for modern state management.
 
 ## ✨ Features
 
@@ -18,31 +18,9 @@ A colorful, engaging Flutter game where players tap and hold an emoji to fill a 
 - **User Personalization** - Add your name for a welcome message
 - **Real-time Updates** - Changes reflect instantly across all screens
 
-### 🏗️ Technical
-- **GetX State Management** - Reactive and efficient
-- **Clean Architecture** - Controllers, Models, and Screens separated
-- **Optimized Performance** - Only affected widgets rebuild
-- **Professional Code** - Well-documented and organized
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Flutter SDK 3.0.0 or higher
-- Dart SDK
-
 ### Installation
+**Clone or download the project**
 
-1. **Clone or download the project**
-
-2. **Install dependencies**
-```bash
-flutter pub get
-```
-
-3. **Run the app**
-```bash
-flutter run
-```
 
 ## 📁 Project Structure
 
@@ -92,6 +70,7 @@ Select from 12 fruit emoji presets, each with matching fill colors:
 - 🍑 Peach (Orange/Pink)
 - 🍒 Cherry (Red)
 - 🍍 Pineapple (Yellow/Orange/Amber)
+- You can Add yours too
 
 ### 🌈 Background Theme
 Choose from 6 beautiful gradient themes:
@@ -128,126 +107,10 @@ See a live preview of your selected emoji with its fill colors.
 - Controls fill percentage
 - Checks win/lose conditions
 
-### Key Patterns
-
-**Reactive State**
-```dart
-final selectedEmoji = '🍉'.obs;
-```
-
-**Reactive UI**
-```dart
-Obx(() => Text(controller.selectedEmoji.value))
-```
-
-**Navigation**
-```dart
-Get.to(() => GameScreen());
-Get.back();
-```
-
-## 📦 Dependencies
-
-```yaml
-dependencies:
-  get: ^4.6.6       # State management
-  bounce: ^1.0.0    # Animation effects
-```
-
-## 🎨 Customization Guide
-
-### Add New Emoji Preset
-
-Edit `lib/models/app_models.dart`:
-
-```dart
-EmojiTheme(
-  emoji: '🥑',
-  name: 'Avocado',
-  fillColors: [
-    Colors.green.shade300,
-    Colors.green.shade600,
-    Colors.green.shade900,
-  ],
-)
-```
-
-### Add New Background Theme
-
-Edit `lib/models/app_models.dart`:
-
-```dart
-BackgroundTheme(
-  name: 'Midnight',
-  colors: [
-    Color(0xFF1a1a2e),
-    Color(0xFF16213e),
-    Color(0xFF0f3460),
-  ],
-)
-```
-
-### Adjust Game Difficulty
-
-Edit `lib/controllers/game_controller.dart`:
-
-**Change Fill Speed**
-```dart
-fillPercentage.value = min(fillPercentage.value + 1.2, 100);
-// Increase 1.2 for faster fill
-```
-
-**Change Win Tolerance**
-```dart
-const tolerance = 5.0;
-// Decrease for harder difficulty
-```
-
-### Change Splash Duration
-
-Edit `lib/screens/splash_screen.dart`:
-
-```dart
-Future.delayed(const Duration(seconds: 4), () {
-  // Change 4 to your preferred seconds
-```
-
-## 🧪 Testing
-
-Run tests:
-```bash
-flutter test
-```
-
-## 🚢 Building for Production
-
-**Android**
-```bash
-flutter build apk --release
-```
-
-**iOS**
-```bash
-flutter build ios --release
-```
-
-**Web**
-```bash
-flutter build web --release
-```
-
 ## 📱 Platform Support
 
 - ✅ Android (SDK 21+)
 - ✅ iOS (11.0+)
-- ✅ Web
-- ✅ Desktop (Windows, macOS, Linux)
-
-## 🎓 Learning Resources
-
-- [GetX Documentation](https://pub.dev/packages/get)
-- [Flutter Documentation](https://flutter.dev/docs)
-- [GetX Pattern Guide](https://github.com/jonataslaw/getx)
 
 ## 🤝 Contributing
 
@@ -256,11 +119,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📄 License
 
 This project is open source and available under the MIT License.
-
-## 🎉 Credits
-
-Built with ❤️ using Flutter and GetX
-
----
 
 **Enjoy the game! 🎮🍉**
